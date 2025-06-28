@@ -1,6 +1,6 @@
 class Digits:
     """
-    this class is for define english digits
+    this class is for define english digis
     """
     def __init__(self):
         self.en_digit = [
@@ -17,5 +17,15 @@ class Digits:
             'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?'
         ]
         self.en_all_digits = [*self.en_digit, *self.en_shift_digit]
-en_digit = Digits()
-print(en_digit.en_all_digits)
+        self.fa_digit = [
+            'ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح', 'ج', 'چ', 
+            'ش', 'س', 'ی', 'ب', 'ل', 'ا', 'ت', 'ن', 'م', 'ک', 'گ',
+            'ظ', 'ط', 'ز', 'ر', 'ذ', 'د', 'پ', 'و', 'ژ', 'ء',
+            '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '۰', '-', '='
+        ]
+        self.fa_shift_digit = [
+            'ْ', 'ٌ', 'ٍ', 'ً', 'ُ', 'ِ', 'َ', 'ّ', ']', '[', '}', '{',
+            'ؤ', 'ئ', 'إ', 'أ', 'آ', 'ة', '»', '«', '؛', ':', '"',
+            'ـ', 'ٓ', 'ٰ', 'ٔ', 'ٕ', 'ٔ', 'ٓ', 'ٰ', 'ٖ', 'ٗ',
+            '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+'
+        ]
