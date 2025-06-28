@@ -16,6 +16,6 @@ class Digits:
             'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '"',
             'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?'
         ]
-        self.en_all_digit = []
+        self.en_all_digits = [*self.en_digit, *self.en_shift_digit]
 en_digit = Digits()
-print(en_digit.all_english_digit())
+print(en_digit.en_all_digits)
