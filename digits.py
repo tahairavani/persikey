@@ -1,6 +1,12 @@
 class Digits:
     """
-    this class is for define english digis
+    this class is for return digits on the list 
+    who use it ? 
+    Digits.en_digits -> (whiout shift)
+    Digits.en_shift_digits -> (with shift)
+    Digits.en_all_digits -> (all language digits with shift and whiout shift)
+    
+    supported languages -> persian and english (with shift and no shift)
     """
     def __init__(self):
         #save english digit no shift typed
