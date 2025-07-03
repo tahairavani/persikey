@@ -1,16 +1,15 @@
-def convert_to_persian(string):
-    """ get English string and convert to persian.
-    thsi function work with tow list of persian digits and english digits
+class ConvertDigit:
     """
-
-
-
-
-
-
-
-
-    
+    this class is for convert persian digit to english digit or reverse
+    """
+    def __init__(self):
+        pass
+    def convert_digit(self,string,as_lang,to_lang):
+        """
+        this function is for convert persian digit to english digit or reverse 
+        as_lang and to_alng parametr valids -> en,fa
+        """
+                   
 
 
 
