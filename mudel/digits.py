@@ -2,6 +2,7 @@ class Digits:
     """
     this class is for return digits on the list 
     who use it ? 
+
     Digits.en_digits -> (whiout shift)
     Digits.en_shift_digits -> (with shift)
     Digits.en_all_digits -> (all language digits with shift and whiout shift)
@@ -24,7 +25,7 @@ class Digits:
             'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?'
         ]
         #save english digit with no shift and whith typed
-        self.en_all_digits = [*self.en_digit, *self.en_shift_digit]
+        self.en_all_digits = [*self.en_digits, *self.en_shift_digits]
         #save persian digit no shift typed
         self.fa_digits = [
             'ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح', 'ج', 'چ', 
