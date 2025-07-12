@@ -35,7 +35,7 @@ class Convert:
 
 
 
-man_crazy = Convert("اثممخ", "persian").convert_to_english()
+man_crazy = Convert("اثممخ پغ دشپث هسس فشاش اخص شقث غخع", "persian").convert_to_english()
 print(man_crazy)
 
 
