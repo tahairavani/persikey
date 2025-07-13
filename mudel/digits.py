@@ -1,3 +1,4 @@
+
 class Digits:
     """
     this class is for return digits on the list 
@@ -40,3 +41,55 @@ class Digits:
         ]
         #save persian digit no shift and whith typed
         self.fa_all_digits = [*self.fa_digits , *self.fa_shift_digits]
+    @classmethod
+    def detect_language(cls , text):
+        """
+        check language (persian , english)
+        input:
+            text: input text
+        output:
+            'persian' if text persian
+            'english' if text english
+            'mixed' if text mixed
+            'unknown' if not in persian or english
+        """
+        persian_chars = 0
+        english_chars = 0
+        other_chars = 0
+        
+        # unicode persian char range
+        persian_range = (
+            (0x0600, 0x06FF),  
+            (0xFB50, 0xFDFF),    
+            (0xFE70, 0xFEFF),
+            )
+        
+        for char in text:
+            if char.isalpha():
+                code_point = ord(char)
+                is_persian = False
+                for start, end in persian_range:
+                    if start <= code_point <= end:
+                        persian_chars += 1
+                        is_persian = True
+                        break
+                
+                if not is_persian and char.isascii():
+                    english_chars += 1
+                elif not is_persian:
+                    other_chars += 1
+        
+        total_alpha = persian_chars + english_chars
+        
+        if total_alpha == 0:
+            return 'unknown'
+        
+        persain_ratio = persian_chars / total_alpha
+        english_ratio = english_chars / total_alpha
+        
+        if persain_ratio > 0.7:
+            return 'persian'
+        elif english_ratio > 0.7:
+            return 'english'
+        else:
+            return 'mixed'
