@@ -1,4 +1,4 @@
-from digits import Digits
+from mudel.digits import Digits
 class Convert:
     """"""
     def __init__(self, text, language):
