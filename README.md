@@ -24,6 +24,8 @@ next active your virtualenv  with this command
 source venv/bin/active
 ```
 
+this project not workeng on all system applications . but use on chrome and ... 
+
 ### 4.run persikey.py
 
 ```
